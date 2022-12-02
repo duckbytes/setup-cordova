@@ -1,7 +1,6 @@
 FROM runmymind/docker-android-sdk:alpine-standalone
 
-RUN apk add alpine-baselayout-3.4.0-r0 && \
-    apk update && apk upgrade && \
+RUN apk update && apk upgrade && \
     apk add gradle npm && \
     npm config set unsafe-perm true && \
     npm install -g cordova
